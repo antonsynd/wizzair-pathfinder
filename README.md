@@ -5,4 +5,5 @@ Usage
 -----
 
 `node wizzair-pathfinder.js ABZ IEV`
+
 `Aberdeen (ABZ) -> Gdansk (GDN) -> Cologne (CGN) -> Kyiv Zhulyany (IEV)`
