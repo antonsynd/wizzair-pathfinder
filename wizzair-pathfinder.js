@@ -61,17 +61,28 @@
 					visited.add(x);
 					path.push(x);
 					
+					var validPaths = [];
+					
 					for (let i of unvisited)
 					{
 						let res = _findPath(map, i, y, clone(path), visited);
 						
 						if (res)
 						{
-							return res;
+							validPaths.push(res);
 						}
 					}
 					
-					return null;
+					if (validPaths.length == 0)
+					{
+						return null;
+					}
+					else
+					{
+						validPaths.sort((a, b) => a.length - b.length);
+						
+						return validPaths[0];
+					}
 				}
 			}
 			else
